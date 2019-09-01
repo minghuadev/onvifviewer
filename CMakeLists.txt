@@ -71,8 +71,7 @@ find_package(QtAV 1.12.0)
 set_package_properties(QtAV PROPERTIES DESCRIPTION "QtAV Multimedia library" URL "https://github.com/wang-bin/QtAV" TYPE OPTIONAL)
 
 if(NOT ANDROID)
-    find_package(KF5 5.44 REQUIRED CoreAddons XmlGui)
-    add_definitions(-DWITH_KF5_XML_GUI)
+    find_package(KF5 5.44 REQUIRED XmlGui)
 endif()
 
 include(ECMQMLModules)
