@@ -110,7 +110,8 @@ int OnvifDeviceManager::size()
     return m_deviceList.size();
 }
 
-void OnvifDeviceManager::aboutApplication()
+void iconLoaderWorkaround()
 {
+    //TODO: For some reason it is needed to link the KF5::XmlGui library for the theme icons to be loaded correctly in flatpak
     new KAboutApplicationDialog(KAboutData::applicationData(), nullptr);
 }
